@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'BodoniBold';
+  src:
+    local('BodoniBold'),
+    url('../fonts/LibreBodoni/LibreBodoni-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'BodoniRegular';
+  src:
+    local('BodoniBold'),
+    url('../fonts/LibreBodoni/LibreBodoni-Regular.ttf') format('truetype');
+  font-weight: normal;
+}

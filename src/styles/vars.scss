@@ -1,0 +1,49 @@
+/* ===== Color theme ===== */
+$white: #fff;
+$black: #333;
+
+/* ===== Project color definitions ===== */
+$header-bg: $black;
+$header-color: $white;
+$navigation-color: $white;
+//$link-color:          pale-blue;
+//$banner-color:        pale-green;
+//$banner-border:       pale-dark-green;
+//$banner-bg:           pale-neon-green;
+//$alert-status:        pale-green;
+//$alert-status-border: pale-dark-green;
+//$button-bg:           pale-neon-blue;
+//$button-border:       pale-blue;
+//$footer-bg:           pale-neon-blue;
+
+:root {
+  /* Colors */
+  --blackpure: #000;
+  --black: #171718;
+  --black-border: #26292d;
+  --white: #fff;
+  --purple: #5c62ec;
+
+  /* Nav */
+  --nav-bg: var(--black);
+  --nav-border: var(--black-border);
+  --nav-text: var(--white);
+
+  /* Header */
+  --header-bg: var(--black);
+  --header-text: var(--white);
+
+  /* Footer */
+  --footer-bg: var(--black);
+  --footer-text: var(--white);
+
+  /* Light mode */
+  --page-bg: var(--white);
+  --text-color: var(--black);
+  --accent: var(--purple);
+  --title-1: var(--accent);
+
+  --project-card-bg: var(--white);
+  --project-card-text: var(--black);
+  --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+}

@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from 'react';
-import Img1 from 'img/pictures/1.jpg';
-import Img2 from 'img/pictures/2.jpg';
-import Img3 from 'img/pictures/3.jpg';
-import Img4 from 'img/pictures/4.jpg';
+import Img1 from '../../../public/img/img/pictures/1.jpg';
+import Img2 from '../../../public/img/img/pictures/2.jpg';
+import Img3 from '../../../public/img/img/pictures/3.jpg';
+import Img4 from '../../../public/img/img/pictures/4.jpg';
 import { Layout, Photo } from 'components';
 import ImageViewer from 'react-simple-image-viewer';
 import './PicturesPage.scss';

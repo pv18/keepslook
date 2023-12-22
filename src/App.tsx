@@ -10,6 +10,7 @@ export const App = () => {
       <Route path={ROUTES.ELEPHANTS} element={<ElephantsPage />} />
       <Route path={ROUTES.PICTURES} element={<PicturesPage />} />
       <Route path={ROUTES.ABOUT} element={<AboutPage />} />
+      <Route path='*' element={<MainPage />} />
     </Routes>
   );
 };

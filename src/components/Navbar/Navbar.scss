@@ -42,13 +42,15 @@
 
 .nav-list__link:hover {
   opacity: 0.8;
+  color:var(--accent);
 }
 
 .nav-list__link--active {
   position: relative;
+  color:var(--accent);
 }
 
-.nav-list__link--active::before {
+/*.nav-list__link--active::before {
   content: '';
 
   position: absolute;
@@ -59,4 +61,4 @@
   height: 2px;
   width: 100%;
   background-color: var(--accent);
-}
+}*/

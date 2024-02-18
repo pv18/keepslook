@@ -4,3 +4,6 @@ export * from './Layout';
 export * from './Photo';
 export * from './Social';
 export * from './Footer';
+export * from './EmptyData';
+export * from './Nav';
+export * from './Navigation';

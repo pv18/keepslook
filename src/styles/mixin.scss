@@ -1,0 +1,42 @@
+/* Breakpoints */
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+$breakpoint-xxx: 1700px;
+
+/* Mixin принимает значения размера и возвращает @media */
+@mixin for-size($size) {
+  @if $size == mobile {
+    @media screen and (min-width: $breakpoint-sm) {
+      @content;
+    }
+  }
+  @if $size == small-tablet {
+    @media screen and (min-width: $breakpoint-md) {
+      @content;
+    }
+  }
+  @if $size == tablet {
+    @media screen and (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+  @if $size == big-tablet {
+    @media screen and (min-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+  @if $size == small-desktop {
+    @media screen and (min-width: $breakpoint-xxl) {
+      @content;
+    }
+  }
+  @if $size == desktop {
+    @media screen and (min-width: $breakpoint-xxx) {
+      @content;
+    }
+  }
+}

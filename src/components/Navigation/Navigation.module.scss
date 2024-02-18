@@ -1,0 +1,38 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .menu {
+    display: flex;
+
+    @media (max-width: 1000px) {
+        display: none;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        margin-right: 10px;
+      }
+    }
+    &.open {
+      display: block;
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 1000px) {
+        display: block;
+    }
+  }
+}

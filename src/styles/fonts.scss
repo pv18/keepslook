@@ -9,7 +9,21 @@
 @font-face {
   font-family: 'BodoniRegular';
   src:
-    local('BodoniBold'),
+    local('BodoniRegular'),
     url('../fonts/LibreBodoni/LibreBodoni-Regular.ttf') format('truetype');
   font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Miama';
+  src:
+    local('Miama'),
+    url('../fonts/Miama/miama.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Dubiel';
+  src:
+    local('Dubiel'),
+    url('../fonts/DubielPlain/Dubiel.ttf') format('truetype');
 }

@@ -1,5 +1,5 @@
 import React, { FC, memo } from 'react';
-import './Photo.scss';
+import s from './Photo.module.scss';
 
 interface IProps {
   src: string;
@@ -10,10 +10,10 @@ export const Photo: FC<IProps> = memo((props) => {
   const { src, callback } = props;
 
   return (
-    <div className={'photo'} onClick={callback}>
+    <div className={s.photo} onClick={callback}>
       <div
         style={{ backgroundImage: `url(${src})` }}
-        className={'photo__inner'}
+        className={s.photo__inner}
       />
     </div>
   );

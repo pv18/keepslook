@@ -10,5 +10,8 @@ export const antTheme = {
       colorBgBase: dark,
       algorithm: true,
     },
+    Drawer: {
+      colorBgElevated: '#000000',
+    },
   },
 };

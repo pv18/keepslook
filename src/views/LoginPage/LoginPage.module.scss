@@ -1,0 +1,14 @@
+@import 'src/styles/vars';
+
+.login {
+  overflow: hidden;
+  padding-bottom: 20px;
+
+  .form {
+    width: 300px;
+    padding: 10px;
+    margin: 40px auto 0;
+    border-radius: 6px;
+    box-shadow: $box-shadow;
+  }
+}

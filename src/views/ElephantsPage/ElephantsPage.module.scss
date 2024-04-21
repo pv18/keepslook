@@ -1,0 +1,55 @@
+@import './src/styles/vars';
+
+.wrapper {
+  padding-bottom: 40px;
+  //background-color: #f7f6ee;
+
+  @include for-size(lg) {
+    padding-bottom: 30px;
+  }
+
+  @include for-size(md) {
+    padding-bottom: 20px;
+  }
+
+  @include for-size(sm) {
+    padding-bottom: 10px;
+  }
+
+  .description {
+    padding-bottom: 20px;
+    background-color: #f7f6ee;
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: 'Caveat', cursive;
+      font-weight: 400;
+      font-size: 58px;
+      color: #31405b;
+    }
+
+    p {
+      margin-bottom: 10px;
+      padding: 0 10px;
+      text-indent: 20px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #31405b;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      button {
+        padding-left: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .images {
+    background-color: #f7f6ee;
+  }
+}

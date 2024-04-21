@@ -1,0 +1,107 @@
+@import './src/styles/vars';
+
+.wrapper {
+  height: 100vh;
+  padding: 5vh 2vw;
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  font-size: 70px;
+  font-weight: 600;
+
+  .container {
+    max-width: 1230px;
+    width: 100%;
+    padding: 40px 15px;
+    margin: 0 auto;
+    //background-color: wheat;
+    background: linear-gradient(to right, #b19d87 85%, #f7f6ee 85%);
+  }
+
+  .titleBlock {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    margin-bottom: 10vh;
+    width: 100%;
+    text-align: right;
+    font-family: 'Miama', sarif;
+
+    .title {
+      padding-right: 10vw;
+      font-size: 60px;
+      font-weight: 400;
+    }
+
+    .subTitle {
+      font-size: 30px;
+      font-style: italic;
+      font-weight: 400;
+    }
+  }
+
+  .mainBlock {
+    margin-bottom: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      width: 50%;
+      padding-left: 48px;
+      font-size: 164px;
+      font-family: 'AlkalamiRegular', serif;
+      //font-family: 'Dubiel', serif;
+      font-weight: 400;
+    }
+
+    .imagesBlock {
+      position: relative;
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+
+      .firstImg {
+        position: absolute;
+        max-width: 300px;
+        width: 100%;
+        top: 200px;
+        right: 250px;
+        z-index: 1;
+        -webkit-box-shadow: -7px 7px 5px -5px rgba(34, 60, 80, 0.6);
+        -moz-box-shadow: -7px 7px 5px -5px rgba(34, 60, 80, 0.6);
+        box-shadow: -7px 7px 5px -5px rgba(34, 60, 80, 0.6);
+      }
+
+      .secondImg {
+        position: relative;
+        display: flex;
+        max-width: 300px;
+        width: 100%;
+        z-index: 2;
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
+      }
+    }
+  }
+
+  .slogan {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    text-align: left;
+    font-size: 60px;
+    font-weight: 400;
+    font-family: 'Miama', sarif;
+    font-style: italic;
+    color: #ffffff;
+
+    span:nth-child(2) {
+      text-align: right;
+    }
+  }
+}

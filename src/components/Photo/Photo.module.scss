@@ -1,0 +1,32 @@
+@import './src/styles/vars';
+
+.photo {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+
+  @include for-size(lg) {
+    width: 33.33%;
+    padding: 8px;
+  }
+
+  @include for-size(md) {
+    width: 50%;
+    padding: 4px;
+  }
+
+  &__inner {
+    padding-bottom: 75%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2px;
+    cursor: zoom-in;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.03, 1.03);
+    }
+  }
+}

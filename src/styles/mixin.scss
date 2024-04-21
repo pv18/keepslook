@@ -1,42 +1,60 @@
 /* Breakpoints */
-$breakpoint-xs: 0;
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1400px;
-$breakpoint-xxx: 1700px;
 
 /* Mixin принимает значения размера и возвращает @media */
 @mixin for-size($size) {
-  @if $size == mobile {
-    @media screen and (min-width: $breakpoint-sm) {
+  @if $size == sm {
+    @media screen and (max-width: $breakpoint-sm) {
       @content;
     }
   }
-  @if $size == small-tablet {
-    @media screen and (min-width: $breakpoint-md) {
+  @if $size == md {
+    @media screen and (max-width: $breakpoint-md) {
       @content;
     }
   }
-  @if $size == tablet {
-    @media screen and (min-width: $breakpoint-lg) {
+  @if $size == lg {
+    @media screen and (max-width: $breakpoint-lg) {
       @content;
     }
   }
-  @if $size == big-tablet {
-    @media screen and (min-width: $breakpoint-xl) {
+  @if $size == xl {
+    @media screen and (max-width: $breakpoint-xl) {
       @content;
     }
   }
-  @if $size == small-desktop {
-    @media screen and (min-width: $breakpoint-xxl) {
+  @if $size == xxl {
+    @media screen and (max-width: $breakpoint-xxl) {
       @content;
     }
   }
-  @if $size == desktop {
-    @media screen and (min-width: $breakpoint-xxx) {
-      @content;
-    }
-  }
+}
+
+/* Mixin для свойств текста, названия взяты из макета дизайнера */
+@mixin font-h1 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+@mixin font-h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+@mixin font-h3 {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@mixin font-bold {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
 }

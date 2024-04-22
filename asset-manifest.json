@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.f8afc337.css",
+    "main.css": "./static/css/main.968cf566.css",
     "main.js": "./static/js/main.4020d80a.js",
     "static/media/45.jpg": "./static/media/45.7e6dfce08d767f5d6427.jpg",
     "static/media/43.jpg": "./static/media/43.18b17da5e37d5180e6ce.jpg",
@@ -55,11 +55,11 @@
     "static/media/bg-main.jpg": "./static/media/bg-main.20ab02d89822d279274a.jpg",
     "static/media/Dubiel.ttf": "./static/media/Dubiel.26e9b55f1012ef8d84c1.ttf",
     "index.html": "./index.html",
-    "main.f8afc337.css.map": "./static/css/main.f8afc337.css.map",
+    "main.968cf566.css.map": "./static/css/main.968cf566.css.map",
     "main.4020d80a.js.map": "./static/js/main.4020d80a.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8afc337.css",
+    "static/css/main.968cf566.css",
     "static/js/main.4020d80a.js"
   ]
 }

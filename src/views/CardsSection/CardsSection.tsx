@@ -35,14 +35,11 @@ export const CardsSection = () => {
         >
           <motion.div custom={1} variants={blockAnimation} className={s.block}>
             <h2 className={s.header}>Слоны Dali</h2>
-            <div className={s.content}>
-              <p>
-                Слоны Сальвадора Дали - это известная оптическая иллюзия,
-                созданная испанским художником Сальвадором Дали в 1952 году.
-                Работа представляет собой изображение трех массивных фигур
-                слонов на фоне закатного неба...
-              </p>
-            </div>
+            <p className={s.content}>
+              «Слоны» - очаровательные существа, покорившие сердца людей во всем
+              мире, как своим величественным внешним видом, так и своим духовным
+              значением. Во многих культурах слоны являются...
+            </p>
             <button
               className={s.button}
               onClick={() => navigate(ROUTES.ELEPHANTS)}
@@ -51,8 +48,13 @@ export const CardsSection = () => {
             </button>
           </motion.div>
           <motion.div custom={1} variants={blockAnimation} className={s.img}>
-            <img src={Img1} alt='Популярные направления' />
+            <img src={Img1} alt='Слоны Дали' />
           </motion.div>
+          <div className={s.buttonWrapper}>
+            <button onClick={() => navigate(ROUTES.ELEPHANTS)}>
+              Далее &raquo;
+            </button>
+          </div>
         </motion.div>
 
         <motion.div
@@ -61,16 +63,13 @@ export const CardsSection = () => {
           viewport={{ amount: 0.5, once: true }}
           className={s.row}
         >
-          <motion.div custom={2} variants={blockAnimation} className={s.block}>
+          <motion.div custom={1} variants={blockAnimation} className={s.block}>
             <h2 className={s.header}>Панно Dali</h2>
-            <div className={s.content}>
-              <p>
-                Слоны Сальвадора Дали - это известная оптическая иллюзия,
-                созданная испанским художником Сальвадором Дали в 1952 году.
-                Работа представляет собой изображение трех массивных фигур
-                слонов на фоне закатного неба...
-              </p>
-            </div>
+            <p className={s.content}>
+              Все искусство Сальвадора Дали пронизано скрытыми смыслами, шифрами
+              и кодами, которые можно разгадывать бесконечно, хотя многие
+              считают, что это всего лишь...
+            </p>
             <button
               className={s.button}
               onClick={() => navigate(ROUTES.PICTURES)}
@@ -78,9 +77,14 @@ export const CardsSection = () => {
               Далее
             </button>
           </motion.div>
-          <motion.div custom={2} variants={blockAnimation} className={s.img}>
-            <img src={Img2} alt='Популярные направления' />
+          <motion.div custom={1} variants={blockAnimation} className={s.img}>
+            <img src={Img2} alt='Панно Дали' />
           </motion.div>
+          <div className={s.buttonWrapper}>
+            <button onClick={() => navigate(ROUTES.PICTURES)}>
+              Далее &raquo;
+            </button>
+          </div>
         </motion.div>
 
         <motion.div
@@ -89,16 +93,9 @@ export const CardsSection = () => {
           viewport={{ amount: 0.5, once: true }}
           className={s.row}
         >
-          <motion.div custom={3} variants={blockAnimation} className={s.block}>
+          <motion.div custom={1} variants={blockAnimation} className={s.block}>
             <h2 className={s.header}>Работы в наличии</h2>
-            <div className={s.content}>
-              <p>
-                Слоны Сальвадора Дали - это известная оптическая иллюзия,
-                созданная испанским художником Сальвадором Дали в 1952 году.
-                Работа представляет собой изображение трех массивных фигур
-                слонов на фоне закатного неба...
-              </p>
-            </div>
+            <p className={s.content}>Готовые работы...</p>
             <button
               className={s.button}
               onClick={() => navigate(ROUTES.READY_WORKS)}
@@ -106,9 +103,14 @@ export const CardsSection = () => {
               Далее
             </button>
           </motion.div>
-          <motion.div custom={3} variants={blockAnimation} className={s.img}>
-            <img src={Img3} alt='Популярные направления' />
+          <motion.div custom={1} variants={blockAnimation} className={s.img}>
+            <img src={Img3} alt='Готовые работы' />
           </motion.div>
+          <div className={s.buttonWrapper}>
+            <button onClick={() => navigate(ROUTES.READY_WORKS)}>
+              Далее &raquo;
+            </button>
+          </div>
         </motion.div>
 
         <motion.div
@@ -117,24 +119,27 @@ export const CardsSection = () => {
           viewport={{ amount: 0.5, once: true }}
           className={s.row}
         >
-          <motion.div custom={4} variants={blockAnimation} className={s.block}>
+          <motion.div custom={1} variants={blockAnimation} className={s.block}>
             <h2 className={s.header}>Обо мне</h2>
-            <div className={s.content}>
-              <p>
-                С самого детства я была очень активным ребенком. Записывалась на
-                все кружки и секции, участвовала во всех конкурсах и
-                соревнованиях. За свои достижения в техникуме была занесена в
-                энциклопедию "Одаренные дети России", также была вручена медаль.
-                И только теперь...
-              </p>
-            </div>
+            <p className={s.content}>
+              С самого детства я была очень активным ребенком. Записывалась на
+              все кружки и секции, участвовала во всех конкурсах и
+              соревнованиях. За свои достижения в техникуме была занесена в
+              энциклопедию "Одаренные дети России", также была вручена медаль. И
+              только теперь...
+            </p>
             <button className={s.button} onClick={() => navigate(ROUTES.ABOUT)}>
               Далее
             </button>
           </motion.div>
-          <motion.div custom={4} variants={blockAnimation} className={s.img}>
+          <motion.div custom={1} variants={blockAnimation} className={s.img}>
             <img src={Img4} alt='Обо мне' />
           </motion.div>
+          <div className={s.buttonWrapper}>
+            <button onClick={() => navigate(ROUTES.ABOUT)}>
+              Далее &raquo;
+            </button>
+          </div>
         </motion.div>
       </Container>
     </div>

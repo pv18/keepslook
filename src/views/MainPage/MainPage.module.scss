@@ -1,33 +1,4 @@
 @import './src/styles/vars';
 
 .wrapper {
-  .content {
-    min-height: 790px;
-    //min-height: 695px;
-    //height: calc(100vh - 60px);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: $black;
-    background-image: url('./image/header-bg.jpg');
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-position: center center;
-
-    @include for-size(lg) {
-      //background-position: center;
-    }
-  }
-
-  .imgWrapper {
-    display: flex;
-    min-height: 790px;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
 }

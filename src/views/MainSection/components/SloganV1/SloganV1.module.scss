@@ -1,0 +1,44 @@
+@import './src/styles/vars';
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5vh;
+  margin-bottom: 10vh;
+  width: 100%;
+  text-align: right;
+  font-family: 'Miama', sarif;
+  user-select: none;
+  z-index: 5;
+
+  @include for-size(md) {
+    margin-bottom: 0;
+    color: #fff;
+    text-align: left;
+    row-gap: 3vh;
+  }
+
+  .title {
+    padding-right: 10vw;
+    font-size: clamp(22px, 8vw, 60px);
+    font-weight: 400;
+    color: #ffffff;
+
+    @include for-size(md) {
+      padding-right: 0;
+      text-shadow:
+        1px 3px 0 #806959,
+        1px 13px 5px #806959;
+      z-index: 5;
+    }
+  }
+
+  .subTitle {
+    font-size: clamp(16px, 4vw, 30px);
+    font-style: italic;
+    font-weight: 600;
+    color: #000;
+    z-index: 5;
+  }
+}

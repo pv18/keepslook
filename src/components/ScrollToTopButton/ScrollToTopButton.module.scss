@@ -1,0 +1,39 @@
+@import './src/styles/vars';
+
+.scroll {
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+  height: 54px;
+  width: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  background-color: #f7f6ee;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 9999;
+
+  @include for-size(lg) {
+    height: 48px;
+    width: 48px;
+    bottom: 30px;
+    left: 15px;
+  }
+
+  @include for-size(md) {
+    height: 40px;
+    width: 40px;
+    bottom: 20px;
+    left: 10px;
+  }
+}
+
+.visible {
+  opacity: 1;
+}

@@ -4,40 +4,33 @@
   height: 100vh;
   padding: 5vh 2vw;
   position: relative;
-  min-height: 600px;
   display: flex;
   flex-direction: column;
   font-size: 70px;
   font-weight: 600;
+  background: #fff;
+  overflow-x: hidden;
+
+  @include for-size(md) {
+    height: 600px;
+    padding: 20px;
+  }
 
   .container {
     max-width: 1230px;
     width: 100%;
     padding: 40px 15px;
     margin: 0 auto;
-    //background-color: wheat;
     background: linear-gradient(to right, #b19d87 85%, #f7f6ee 85%);
-  }
 
-  .titleBlock {
-    display: flex;
-    flex-direction: column;
-    row-gap: 3vh;
-    margin-bottom: 10vh;
-    width: 100%;
-    text-align: right;
-    font-family: 'Miama', sarif;
-
-    .title {
-      padding-right: 10vw;
-      font-size: 60px;
-      font-weight: 400;
-    }
-
-    .subTitle {
-      font-size: 30px;
-      font-style: italic;
-      font-weight: 400;
+    @include for-size(md) {
+      padding: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background-image: url('./bg-mobile2.jpg');
+      background-position: top left;
+      background-repeat: no-repeat;
     }
   }
 
@@ -46,14 +39,23 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    user-select: none;
+
+    @include for-size(md) {
+      margin-bottom: 0;
+    }
 
     .logo {
-      width: 50%;
       padding-left: 48px;
-      font-size: 164px;
+      font-size: clamp(42px, 12vw, 156px);
       font-family: 'AlkalamiRegular', serif;
-      //font-family: 'Dubiel', serif;
       font-weight: 400;
+
+      @include for-size(md) {
+        width: auto;
+        padding-left: 0;
+        margin-bottom: 20px;
+      }
     }
 
     .imagesBlock {
@@ -61,6 +63,10 @@
       width: 50%;
       display: flex;
       justify-content: flex-end;
+
+      @include for-size(md) {
+        display: none;
+      }
 
       .firstImg {
         position: absolute;
@@ -87,21 +93,16 @@
     }
   }
 
-  .slogan {
-    max-width: 500px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 3vh;
-    text-align: left;
-    font-size: 60px;
-    font-weight: 400;
-    font-family: 'Miama', sarif;
-    font-style: italic;
-    color: #ffffff;
+  .mobileImg {
+    display: none;
 
-    span:nth-child(2) {
-      text-align: right;
+    @include for-size(md) {
+      display: block;
+      position: absolute;
+      top: 300px;
+      right: 10px;
+      width: 220px;
+      z-index: 2;
     }
   }
 }

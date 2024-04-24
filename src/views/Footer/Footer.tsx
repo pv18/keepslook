@@ -11,13 +11,17 @@ export const Footer = () => {
   return (
     <footer className={s.footer}>
       <Container>
+        <div className={s.title}>
+          Сайт временно находится в доработке , для заказа обращайтесь в соц.
+          сети
+        </div>
         <div className={s.contacts}>
+          <Social />
           <div className={s.phone}>
             <span>Телефон :</span>
             <FaPhoneAlt color={colorIcon} size={sizeIcon} />
             <a href='tel:+79265905390'>+7 (926) 590 53 90</a>
           </div>
-          <Social />
         </div>
       </Container>
     </footer>

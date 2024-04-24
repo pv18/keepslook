@@ -1,6 +1,10 @@
 @import './src/styles/vars';
 
 .container {
+  @include for-size(xxl) {
+    display: none;
+  }
+
   .chevron {
     position: absolute;
     width: 28px;

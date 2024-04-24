@@ -4,11 +4,10 @@ import { ROUTES } from 'enums';
 import {
   AboutPage,
   ElephantsPage,
+  LoginPage,
   MainPage,
   PicturesPage,
   ReadyWorksPage,
-  LoginPage,
-  ContactsPage,
 } from 'views';
 
 export const App = () => {
@@ -20,7 +19,6 @@ export const App = () => {
       <Route path={ROUTES.ABOUT} element={<AboutPage />} />
       <Route path={ROUTES.READY_WORKS} element={<ReadyWorksPage />} />
       <Route path={ROUTES.LOGIN} element={<LoginPage />} />
-      <Route path={ROUTES.CONTACTS} element={<ContactsPage />} />
       <Route path='*' element={<MainPage />} />
     </Routes>
   );

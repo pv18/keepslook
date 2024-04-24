@@ -4,7 +4,6 @@ export * from './PicturesPage';
 export * from './AboutPage';
 export * from './ReadyWorksPage';
 export * from './LoginPage';
-export * from './ContactsPage';
 export * from './CardsSection';
 export * from './Footer';
 export * from './MainSection';

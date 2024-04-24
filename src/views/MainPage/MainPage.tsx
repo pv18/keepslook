@@ -1,14 +1,15 @@
 import React from 'react';
-import { MobileMenu } from 'components';
+import { Navigation, ScrollToTopButton } from 'components';
 import { CardsSection, Footer, MainSection } from 'views';
+import { useScrollToTop } from 'hooks';
 import s from './MainPage.module.scss';
-import { Menu } from 'components/Menu/Menu';
 
 export const MainPage = () => {
+  useScrollToTop();
   return (
     <div className={s.wrapper}>
-      <MobileMenu />
-      {/*<Menu/>*/}
+      <Navigation />
+      <ScrollToTopButton />
       <MainSection />
       <CardsSection />
       <Footer />

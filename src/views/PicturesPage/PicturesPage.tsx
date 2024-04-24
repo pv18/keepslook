@@ -12,15 +12,17 @@ import BgImg2 from './img/2.jpg';
 import BgImg3 from './img/3.jpg';
 import BgImg4 from './img/4.jpg';
 import BgImg5 from './img/5.webp';
-import { Container, Header, MobileMenu, Photo } from 'components';
+import { Container, Navigation, Photo, ScrollToTopButton } from 'components';
 import ImageViewer from 'react-simple-image-viewer';
 import s from './PicturesPage.module.scss';
+import { useScrollToTop } from 'hooks';
 
 export const PicturesPage = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const images = [Img1, Img8, Img3, Img4, Img5, Img6, Img7, Img2];
+  useScrollToTop();
 
   const openImageViewer = useCallback((index: any) => {
     setCurrentImage(index);
@@ -198,31 +200,32 @@ export const PicturesPage = () => {
   return (
     <section className={s.wrapper}>
       <Container>
-        {/*<Header />*/}
-        <MobileMenu />
+        <Navigation />
+        <ScrollToTopButton />
         <div className={s.description}>
           <h2 className={s.header}>Панно Dali</h2>
+          <div className={s.divider} />
           {isExpanded ? longText() : shortText()}
         </div>
-        <div className={s.images}>
-          {images.map((src, index) => (
-            <Photo
-              key={index}
-              src={src}
-              callback={() => openImageViewer(index)}
-            />
-          ))}
-          {isViewerOpen && (
-            <ImageViewer
-              src={images}
-              currentIndex={currentImage}
-              disableScroll={false}
-              closeOnClickOutside={true}
-              onClose={closeImageViewer}
-            />
-          )}
-        </div>
       </Container>
+      <div className={s.images}>
+        {images.map((src, index) => (
+          <Photo
+            key={index}
+            src={src}
+            callback={() => openImageViewer(index)}
+          />
+        ))}
+        {isViewerOpen && (
+          <ImageViewer
+            src={images}
+            currentIndex={currentImage}
+            disableScroll={false}
+            closeOnClickOutside={true}
+            onClose={closeImageViewer}
+          />
+        )}
+      </div>
     </section>
   );
 };

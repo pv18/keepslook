@@ -1,117 +1,97 @@
-import React, { useCallback, useState } from 'react';
-import { Container, Header, MobileMenu, Photo } from 'components';
-import Img1 from '../../img/img/elephants/1.jpg';
-import Img2 from '../../img/img/elephants/2.jpg';
-import Img3 from '../../img/img/elephants/3.jpg';
-import Img4 from '../../img/img/elephants/4.jpg';
-import Img5 from '../../img/img/elephants/5.jpg';
-import Img6 from '../../img/img/elephants/6.jpg';
-import Img7 from '../../img/img/elephants/7.jpg';
-import Img8 from '../../img/img/elephants/8.jpg';
-import Img9 from '../../img/img/elephants/9.jpg';
-import Img10 from '../../img/img/elephants/10.jpg';
-import Img11 from '../../img/img/elephants/11.jpg';
-import Img12 from '../../img/img/elephants/12.jpg';
-import Img13 from '../../img/img/elephants/13.jpg';
-import Img14 from '../../img/img/elephants/14.jpg';
-import Img15 from '../../img/img/elephants/15.jpg';
-import Img16 from '../../img/img/elephants/16.jpg';
-import Img17 from '../../img/img/elephants/17.jpg';
-import Img18 from '../../img/img/elephants/18.jpg';
-import Img19 from '../../img/img/elephants/19.jpg';
-import Img20 from '../../img/img/elephants/20.jpg';
-import Img21 from '../../img/img/elephants/21.jpg';
-import Img22 from '../../img/img/elephants/22.jpg';
-import Img35 from '../../img/img/elephants/35.png';
-import Img36 from '../../img/img/elephants/36.jpg';
-import Img37 from '../../img/img/elephants/37.jpg';
-import Img38 from '../../img/img/elephants/38.jpg';
-import Img39 from '../../img/img/elephants/39.jpg';
-import Img40 from '../../img/img/elephants/40.jpg';
-import Img41 from '../../img/img/elephants/41.jpg';
-import Img42 from '../../img/img/elephants/42.jpg';
-import Img43 from '../../img/img/elephants/43.jpg';
-import Img44 from '../../img/img/elephants/44.jpg';
-import Img45 from '../../img/img/elephants/45.jpg';
-import Img46 from '../../img/img/elephants/46.jpg';
-import Img47 from '../../img/img/elephants/47.jpg';
-import Img48 from '../../img/img/elephants/48.jpg';
-import Img50 from '../../img/img/elephants/50.jpg';
-import Img51 from '../../img/img/elephants/51.jpg';
-import Img52 from '../../img/img/elephants/52.jpg';
-import Img53 from '../../img/img/elephants/53.jpg';
-import Img54 from '../../img/img/elephants/54.jpg';
-import Img55 from '../../img/img/elephants/55.jpg';
-import Img56 from '../../img/img/elephants/56.jpg';
-import ImageViewer from 'react-simple-image-viewer';
+import React, { useState } from 'react';
+import {
+  Container,
+  ImageGroup,
+  Navigation,
+  ScrollToTopButton,
+} from 'components';
+import Img1Group1 from './assets/group1/1.jpg';
+import Img2Group1 from './assets/group1/2.jpg';
+import Img3Group1 from './assets/group1/3.jpg';
+import Img4Group1 from './assets/group1/4.jpg';
+import Img5Group1 from './assets/group1/5.jpg';
+import Img6Group1 from './assets/group1/6.jpg';
+import Img1Group2 from './assets/group2/1.jpg';
+import Img2Group2 from './assets/group2/2.jpg';
+import Img3Group2 from './assets/group2/3.jpg';
+import Img4Group2 from './assets/group2/4.jpg';
+import Img5Group2 from './assets/group2/5.jpg';
+import Img6Group2 from './assets/group2/6.jpg';
+import Img7Group2 from './assets/group2/7.jpg';
+import Img8Group2 from './assets/group2/8.jpg';
+import Img9Group2 from './assets/group2/9.jpg';
+import Img1Group3 from './assets/group3/1.png';
+import Img2Group3 from './assets/group3/2.jpg';
+import Img3Group3 from './assets/group3/3.jpg';
+import Img4Group3 from './assets/group3/4.jpg';
+import Img1Group4 from './assets/group4/1.jpg';
+import Img2Group4 from './assets/group4/2.jpg';
+import Img3Group4 from './assets/group4/3.jpg';
+import Img4Group4 from './assets/group4/4.jpg';
+import Img2Group5 from './assets/group5/2.jpg';
+import Img3Group5 from './assets/group5/3.jpg';
+import Img4Group5 from './assets/group5/4.jpg';
+import Img5Group5 from './assets/group5/5.jpg';
+import Img6Group5 from './assets/group5/6.jpg';
+import Img7Group5 from './assets/group5/7.jpg';
+import Img8Group5 from './assets/group5/8.jpg';
+import Img1Group6 from './assets/group6/1.jpg';
+import Img2Group6 from './assets/group6/2.jpg';
+import Img3Group6 from './assets/group6/3.jpg';
+import Img1Group7 from './assets/group7/1.jpg';
+import Img1Group8 from './assets/group8/1.jpg';
+import Img1Group9 from './assets/group9/1.jpg';
+import Img1Group10 from './assets/group10/1.jpg';
+import Img1Group11 from './assets/group11/1.jpg';
+import { useScrollToTop } from 'hooks';
 import s from './ElephantsPage.module.scss';
 
 export const ElephantsPage = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [isViewerOpen, setIsViewerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-  const images = [
-    Img1,
-    Img2,
-    Img11,
-    Img4,
-    Img5,
-    Img37,
-    Img38,
-    Img39,
-    Img40,
-    Img41,
-    Img42,
-    Img6,
-    Img7,
-    Img10,
-    Img43,
-    Img9,
-    Img8,
-    Img44,
-    Img3,
-    Img12,
-    Img13,
-    Img14,
-    Img15,
-    Img45,
-    Img35,
-    Img46,
-    Img17,
-    Img18,
-    Img19,
-    Img20,
-    Img21,
-    Img22,
-    Img16,
-    Img36,
-    Img47,
-    Img48,
-    Img50,
-    Img51,
-    Img52,
-    Img53,
-    Img54,
-    Img55,
-    Img56,
+  useScrollToTop();
+  const group1 = [
+    Img4Group1,
+    Img1Group1,
+    Img2Group1,
+    Img3Group1,
+    Img5Group1,
+    Img6Group1,
   ];
-
-  const openImageViewer = useCallback((index: any) => {
-    setCurrentImage(index);
-    setIsViewerOpen(true);
-  }, []);
-
-  const closeImageViewer = () => {
-    setCurrentImage(0);
-    setIsViewerOpen(false);
-  };
+  const group2 = [
+    Img1Group2,
+    Img4Group2,
+    Img2Group2,
+    Img3Group2,
+    Img5Group2,
+    Img6Group2,
+    Img7Group2,
+    Img8Group2,
+    Img9Group2,
+  ];
+  const group3 = [Img1Group3, Img2Group3, Img3Group3, Img4Group3];
+  const group4 = [Img2Group4, Img1Group4, Img3Group4, Img4Group4];
+  const group5 = [
+    Img3Group5,
+    Img4Group5,
+    Img5Group5,
+    Img7Group5,
+    Img8Group5,
+    Img2Group5,
+    Img6Group5,
+  ];
+  const group6 = [Img3Group6, Img1Group6, Img2Group6];
+  const group7 = [Img1Group7];
+  const group8 = [Img1Group8];
+  const group9 = [Img1Group9];
+  const group10 = [Img1Group10];
+  const group11 = [Img1Group11];
 
   const shortText = () => {
     return (
       <>
         <p>
           «Слоны» - очаровательные существа, покорившие сердца людей во всем
-          мире как своим величественным внешним видом, так и своим духовным
+          мире, как своим величественным внешним видом, так и своим духовным
           значением. Во многих культурах слоны являются священным животным и
           символизируют счастье, успех, долголетие и мудрость.
         </p>
@@ -217,31 +197,25 @@ export const ElephantsPage = () => {
   return (
     <section className={s.wrapper}>
       <Container>
-        {/*<Header />*/}
-        <MobileMenu />
+        <Navigation />
+        <ScrollToTopButton />
         <div className={s.description}>
           <h2 className={s.header}>Слоны Dali</h2>
+          <div className={s.divider} />
           {isExpanded ? longText() : shortText()}
         </div>
-        <div className={s.images}>
-          {images.map((src, index) => (
-            <Photo
-              key={index}
-              src={src}
-              callback={() => openImageViewer(index)}
-            />
-          ))}
-          {isViewerOpen && (
-            <ImageViewer
-              src={images}
-              currentIndex={currentImage}
-              disableScroll={false}
-              closeOnClickOutside={true}
-              onClose={closeImageViewer}
-            />
-          )}
-        </div>
       </Container>
+      <ImageGroup images={group1} />
+      <ImageGroup images={group2} />
+      <ImageGroup images={group8} />
+      <ImageGroup images={group3} />
+      <ImageGroup images={group4} />
+      <ImageGroup images={group5} />
+      <ImageGroup images={group9} />
+      <ImageGroup images={group7} />
+      <ImageGroup images={group6} />
+      <ImageGroup images={group10} />
+      <ImageGroup images={group11} />
     </section>
   );
 };

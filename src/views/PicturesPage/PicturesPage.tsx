@@ -12,17 +12,17 @@ import BgImg2 from './img/2.jpg';
 import BgImg3 from './img/3.jpg';
 import BgImg4 from './img/4.jpg';
 import BgImg5 from './img/5.webp';
-import { Container, Navigation, Photo, ScrollToTopButton } from 'components';
+import { Container, Layout, Photo } from 'components';
 import ImageViewer from 'react-simple-image-viewer';
+import { BsArrowLeftSquareFill, BsArrowRightSquareFill } from 'react-icons/bs';
+import { IoMdCloseCircle } from 'react-icons/io';
 import s from './PicturesPage.module.scss';
-import { useScrollToTop } from 'hooks';
 
 export const PicturesPage = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const images = [Img1, Img8, Img3, Img4, Img5, Img6, Img7, Img2];
-  useScrollToTop();
 
   const openImageViewer = useCallback((index: any) => {
     setCurrentImage(index);
@@ -42,11 +42,7 @@ export const PicturesPage = () => {
         это всего лишь зарисовки его шизофренических фантазий и видений. Для
         меня лично неважно, художника нет с нами уже 35 лет, а его жизнь и
         наследие, куда входят картины, скульптуры, книги и даже логотип всем
-        известной карамельки (Chupa-Chups), не дают покоя как знатокам
-        искусства, так и простым обывателям. Признаюсь, конечно же далеко не все
-        его произведения нашли место в моей душе. За всю свою карьеру Сальвадор
-        Дали создал около 2000 произведений, несколько сотен из которых стали
-        культовыми ...{' '}
+        известной карамельки (Chupa-Chups), ...{' '}
         <button className={s.button} onClick={handleText}>
           далее &raquo;
         </button>
@@ -68,7 +64,7 @@ export const PicturesPage = () => {
           все его произведения нашли место в моей душе. За всю свою карьеру
           Сальвадор Дали создал около 2000 произведений, несколько сотен из
           которых стали культовыми. Как раз некоторые из таких работ и
-          вдохновили меня на создание «Панно» по кругу которого расположены
+          вдохновили меня на создание «Панно», по кругу которого расположены
           фрагменты таких картин как:
         </p>
         <main className={s.main}>
@@ -198,34 +194,51 @@ export const PicturesPage = () => {
   };
 
   return (
-    <section className={s.wrapper}>
-      <Container>
-        <Navigation />
-        <ScrollToTopButton />
-        <div className={s.description}>
-          <h2 className={s.header}>Панно Dali</h2>
-          <div className={s.divider} />
-          {isExpanded ? longText() : shortText()}
+    <Layout>
+      <section className={s.wrapper}>
+        <Container>
+          <div className={s.description}>
+            <h2 className={s.header}>Панно Dali</h2>
+            <div className={s.divider} />
+            {isExpanded ? longText() : shortText()}
+          </div>
+        </Container>
+        <div className={s.images}>
+          {images.map((src, index) => (
+            <Photo
+              key={index}
+              src={src}
+              callback={() => openImageViewer(index)}
+            />
+          ))}
+          {isViewerOpen && (
+            <ImageViewer
+              src={images}
+              currentIndex={currentImage}
+              disableScroll={false}
+              closeOnClickOutside={true}
+              onClose={closeImageViewer}
+              leftArrowComponent={
+                <BsArrowLeftSquareFill
+                  style={{ opacity: 1 }}
+                  size={80}
+                  color={'#fff'}
+                />
+              }
+              rightArrowComponent={
+                <BsArrowRightSquareFill size={80} color={'#fff'} />
+              }
+              closeComponent={
+                <IoMdCloseCircle
+                  style={{ opacity: 1 }}
+                  size={40}
+                  color={'#fff'}
+                />
+              }
+            />
+          )}
         </div>
-      </Container>
-      <div className={s.images}>
-        {images.map((src, index) => (
-          <Photo
-            key={index}
-            src={src}
-            callback={() => openImageViewer(index)}
-          />
-        ))}
-        {isViewerOpen && (
-          <ImageViewer
-            src={images}
-            currentIndex={currentImage}
-            disableScroll={false}
-            closeOnClickOutside={true}
-            onClose={closeImageViewer}
-          />
-        )}
-      </div>
-    </section>
+      </section>
+    </Layout>
   );
 };

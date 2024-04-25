@@ -16,6 +16,7 @@
     font-weight: 400;
     font-size: 58px;
     color: #31405b;
+    user-select: none;
 
     @include for-size(lg) {
       margin-bottom: 20px;

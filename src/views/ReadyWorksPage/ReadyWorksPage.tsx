@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Navigation, ScrollToTopButton } from 'components';
+import { Container, Layout } from 'components';
 import ProductImg1 from './assets/product1/1.jpg';
 import ProductImg2 from './assets/product1/2.jpg';
 import ProductImg3 from './assets/product1/3.jpg';
@@ -21,7 +21,6 @@ import Product3Img5 from './assets/product3/5.jpg';
 import Product3Img6 from './assets/product3/6.jpg';
 import { ProductCard } from 'views/ReadyWorksPage/components';
 import { addSpacesToHundredths, Footer } from 'views';
-import { useScrollToTop } from 'hooks';
 import s from './ReadyWorksPage.module.scss';
 
 export const ReadyWorksPage = () => {
@@ -50,39 +49,38 @@ export const ReadyWorksPage = () => {
     Product3Img5,
     Product3Img6,
   ];
-  useScrollToTop();
 
   return (
-    <section className={s.wrapper}>
-      <Navigation />
-      <ScrollToTopButton />
-      <Container>
-        <h2 className={s.header}>Готовые работы</h2>
-        <div className={s.cards}>
-          <ProductCard
-            images={productImages1}
-            title={'Слон "Идущий" с камнями'}
-            color={'Старая бронза'}
-            size={[27, 59, 21]}
-            price={addSpacesToHundredths(25000)}
-          />
-          <ProductCard
-            images={productImages2}
-            title={'Слон "Весёлый"'}
-            color={'Тёмный-коричневый'}
-            size={[36, 53, 20]}
-            price={addSpacesToHundredths(25000)}
-          />
-          <ProductCard
-            images={productImages3}
-            title={'Слон "Весёлый" с пирамидой'}
-            color={'Старая бронза'}
-            size={[33, 69, 21]}
-            price={addSpacesToHundredths(25000)}
-          />
-        </div>
-      </Container>
-      <Footer />
-    </section>
+    <Layout>
+      <section className={s.wrapper}>
+        <Container>
+          <h2 className={s.header}>Готовые работы</h2>
+          <div className={s.cards}>
+            <ProductCard
+              images={productImages1}
+              title={'Слон "Идущий" с камнями'}
+              color={'Старая бронза'}
+              size={[27, 59, 21]}
+              price={addSpacesToHundredths(25000)}
+            />
+            <ProductCard
+              images={productImages2}
+              title={'Слон "Весёлый"'}
+              color={'Тёмно-коричневый'}
+              size={[36, 53, 20]}
+              price={addSpacesToHundredths(25000)}
+            />
+            <ProductCard
+              images={productImages3}
+              title={'Слон "Весёлый" с пирамидой'}
+              color={'Старая бронза'}
+              size={[33, 69, 21]}
+              price={addSpacesToHundredths(25000)}
+            />
+          </div>
+        </Container>
+        <Footer />
+      </section>
+    </Layout>
   );
 };

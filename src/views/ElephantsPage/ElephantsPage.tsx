@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Container,
-  ImageGroup,
-  Navigation,
-  ScrollToTopButton,
-} from 'components';
+import { Container, ImageGroup, Layout } from 'components';
 import Img1Group1 from './assets/group1/1.jpg';
 import Img2Group1 from './assets/group1/2.jpg';
 import Img3Group1 from './assets/group1/3.jpg';
@@ -20,7 +15,7 @@ import Img6Group2 from './assets/group2/6.jpg';
 import Img7Group2 from './assets/group2/7.jpg';
 import Img8Group2 from './assets/group2/8.jpg';
 import Img9Group2 from './assets/group2/9.jpg';
-import Img1Group3 from './assets/group3/1.png';
+import Img1Group3 from './assets/group3/1.jpg';
 import Img2Group3 from './assets/group3/2.jpg';
 import Img3Group3 from './assets/group3/3.jpg';
 import Img4Group3 from './assets/group3/4.jpg';
@@ -43,12 +38,10 @@ import Img1Group8 from './assets/group8/1.jpg';
 import Img1Group9 from './assets/group9/1.jpg';
 import Img1Group10 from './assets/group10/1.jpg';
 import Img1Group11 from './assets/group11/1.jpg';
-import { useScrollToTop } from 'hooks';
 import s from './ElephantsPage.module.scss';
 
 export const ElephantsPage = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  useScrollToTop();
   const group1 = [
     Img4Group1,
     Img1Group1,
@@ -96,13 +89,8 @@ export const ElephantsPage = () => {
           символизируют счастье, успех, долголетие и мудрость.
         </p>
         <p>
-          Так, например, слоны в Азиатском мире считаются божественными
-          животными, сильными и выносливыми наделенные терпением и умом. Они по
-          праву носят титул царственного животного.
-        </p>
-        <p>
-          В Китае слон считается символом здоровья и долголетия, он
-          символизирует... <button onClick={handleText}>далее &raquo;</button>
+          Так, например, слоны в Азиатском мире считаются...{' '}
+          <button onClick={handleText}>далее &raquo;</button>
         </p>
       </>
     );
@@ -119,7 +107,7 @@ export const ElephantsPage = () => {
         </p>
         <p>
           Так, например, слоны в Азиатском мире считаются божественными
-          животными, сильными и выносливыми наделенные терпением и умом. Они по
+          животными, сильными и выносливыми, наделенные терпением и умом. Они по
           праву носят титул царственного животного.
         </p>
         <p>
@@ -154,7 +142,7 @@ export const ElephantsPage = () => {
           писателя, режиссера и скульптора Сальвадора Дали. Если рассматривать
           его произведения, то слоны стали одним из его самых узнаваемых
           символов. Наверняка вам знакомы длинные, тонкие ножки слонов, несущих
-          на себе таинственные объекты. Для Дали, слоны стали не просто
+          на себе таинственные объекты. Для Дали слоны стали не просто
           животными, а символом – будущего, воплощением бессмертия и мистицизма.
         </p>
         <p>
@@ -168,21 +156,21 @@ export const ElephantsPage = () => {
           немногих животных, которое может держать на себе очень тяжелые
           предметы. Таким образом, символика слонов в его работах становится
           многослойной: от мистического значения до практической
-          функциональности. Так что в творчестве Дали, слоны являются не просто
+          функциональности. Так что в творчестве Дали слоны являются не просто
           изображением животного, а особым символом, который помогает художнику
           транслировать свои мысли о времени, памяти и бессмертии.
         </p>
         <p>
-          Вот и меня не обошел его мифический образ стороной. Конечно выполняя
+          Вот и меня не обошел его мифический образ стороной. Конечно, выполняя
           скульптуры по мотивам таких картин, каждый творец видит и берет для
           себя именно те образы и исполнения, которые наиболее близки ему. Эти
           чудесные слоники просто покорили мое сердце, наслаждаясь процессом
           создания, я не замечаю течения времени. Каждый слоник, выполненный с
-          любовью и теплом моих рук, уже нашел себе дом радуя своего владельца.
+          любовью и теплом моих рук, уже нашел себе дом, радуя своего владельца.
           Слоники приятно удивляют своих хозяев не только своим исполнением, но
           и магическими свойствами, они действительно помогают с легкостью
           длинных ног перешагивать все невзгоды, оставаясь всегда на высоте. Я
-          верю, что это все, благодаря положительной энергетики с которой я
+          верю, что это все благодаря положительной энергетике, с которой я
           выполняю каждого любимца.{' '}
           <button onClick={handleText}>&laquo; свернуть</button>
         </p>
@@ -195,27 +183,27 @@ export const ElephantsPage = () => {
   };
 
   return (
-    <section className={s.wrapper}>
-      <Container>
-        <Navigation />
-        <ScrollToTopButton />
-        <div className={s.description}>
-          <h2 className={s.header}>Слоны Dali</h2>
-          <div className={s.divider} />
-          {isExpanded ? longText() : shortText()}
-        </div>
-      </Container>
-      <ImageGroup images={group1} />
-      <ImageGroup images={group2} />
-      <ImageGroup images={group8} />
-      <ImageGroup images={group3} />
-      <ImageGroup images={group4} />
-      <ImageGroup images={group5} />
-      <ImageGroup images={group9} />
-      <ImageGroup images={group7} />
-      <ImageGroup images={group6} />
-      <ImageGroup images={group10} />
-      <ImageGroup images={group11} />
-    </section>
+    <Layout>
+      <section className={s.wrapper}>
+        <Container>
+          <div className={s.description}>
+            <h2 className={s.header}>Слоны Dali</h2>
+            <div className={s.divider} />
+            {isExpanded ? longText() : shortText()}
+          </div>
+        </Container>
+        <ImageGroup images={group1} />
+        <ImageGroup images={group2} />
+        <ImageGroup images={group8} />
+        <ImageGroup images={group3} />
+        <ImageGroup images={group4} />
+        <ImageGroup images={group5} />
+        <ImageGroup images={group9} />
+        <ImageGroup images={group7} />
+        <ImageGroup images={group6} />
+        <ImageGroup images={group10} />
+        <ImageGroup images={group11} />
+      </section>
+    </Layout>
   );
 };

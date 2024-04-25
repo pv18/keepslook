@@ -1,9 +1,9 @@
 import React from 'react';
 import { ROUTES } from 'enums';
-import Img1 from 'views/MainPage/image/3.jpg';
-import Img2 from 'views/MainPage/image/8.jpg';
-import Img3 from 'views/MainPage/image/10.jpg';
-import Img4 from 'views/MainPage/image/2.jpg';
+import Img1 from './2.jpg';
+import Img2 from './3.jpg';
+import Img3 from './4.jpg';
+import Img4 from './1.jpg';
 import { useNavigate } from 'react-router-dom';
 import { Container } from 'components';
 import { motion } from 'framer-motion';

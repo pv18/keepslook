@@ -1,14 +1,9 @@
-import React, {
-  FC,
-  memo,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import React, { FC, memo, useCallback, useState } from 'react';
 import ImageViewer from 'react-simple-image-viewer';
 import { Carousel } from 'antd';
-import { PiCardsBold, PiCardsFill } from 'react-icons/pi';
+import { PiCardsFill } from 'react-icons/pi';
+import { BsArrowLeftSquareFill, BsArrowRightSquareFill } from 'react-icons/bs';
+import { IoMdCloseCircle } from 'react-icons/io';
 import s from './ImageGroup.module.scss';
 
 interface ImageGroupProps {
@@ -39,6 +34,23 @@ export const ImageGroup: FC<ImageGroupProps> = memo(({ images }) => {
             disableScroll={false}
             closeOnClickOutside={true}
             onClose={closeImageViewer}
+            leftArrowComponent={
+              <BsArrowLeftSquareFill
+                style={{ opacity: 1 }}
+                size={80}
+                color={'#fff'}
+              />
+            }
+            rightArrowComponent={
+              <BsArrowRightSquareFill size={80} color={'#fff'} />
+            }
+            closeComponent={
+              <IoMdCloseCircle
+                style={{ opacity: 1 }}
+                size={40}
+                color={'#fff'}
+              />
+            }
           />
         </div>
       ) : (

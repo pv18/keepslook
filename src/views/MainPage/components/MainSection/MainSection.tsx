@@ -1,11 +1,10 @@
 import React from 'react';
-import ImgBgHeader5 from 'views/MainPage/image/bg-header4.jpg';
-import ImgBgHeader4 from 'views/MainPage/image/bg-header3.jpg';
-import ImgMobileBG from './bg-mobile.png';
+import Img1 from './1.jpg';
+import Img2 from './2.jpg';
 import { ScrollDowns } from 'components';
 import { motion } from 'framer-motion';
 import { useResize } from 'hooks';
-import { SloganV1, SloganV2 } from 'views/MainSection/components';
+import { SloganV1, SloganV2 } from './components';
 import Typewriter from 'typewriter-effect';
 import s from './MainSection.module.scss';
 
@@ -37,10 +36,10 @@ export const MainSection = () => {
           </div>
           <div className={s.imagesBlock}>
             <div className={s.firstImg}>
-              <img src={ImgBgHeader5} />
+              <img src={Img2} />
             </div>
             <div className={s.secondImg}>
-              <img src={ImgBgHeader4} />
+              <img src={Img1} />
             </div>
           </div>
         </div>

@@ -46,9 +46,6 @@ export const MainSection = () => {
 
         {isScreenMd ? <SloganV2 /> : <SloganV1 />}
       </div>
-      {/*<div className={s.mobileImg}>*/}
-      {/*  <img src={ImgMobileBG} />*/}
-      {/*</div>*/}
       <ScrollDowns />
     </motion.section>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import s from 'views/MainPage/components/MainSection/components/SloganV2/SloganV2.module.scss';
+import s from './SloganV2.module.scss';
 
 const textOnLeftAnimation = {
   hidden: {

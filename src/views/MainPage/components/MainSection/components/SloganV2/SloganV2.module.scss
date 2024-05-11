@@ -1,4 +1,4 @@
-@import '../../../../../../styles/vars';
+@import 'src/styles/vars';
 
 .wrapper {
   position: relative;
@@ -8,20 +8,20 @@
   flex-direction: column;
   row-gap: 4vh;
   text-align: left;
-  font-size: clamp(28px, 8vw, 60px);
+  font-size: clamp(28px, 9vw, 64px);
   font-weight: 400;
   font-family: 'Miama', sarif;
   font-style: italic;
   color: #fff;
   user-select: none;
   z-index: 5;
+  text-shadow:
+    1px 3px 0 #806959,
+    1px 13px 5px #806959;
 
   @include for-size(md) {
     margin-bottom: 40px;
     row-gap: 0;
-    text-shadow:
-      1px 3px 0 #806959,
-      1px 13px 5px #806959;
   }
 
   span:nth-child(2) {

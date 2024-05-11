@@ -2,7 +2,7 @@
 
 .container {
   @include for-size(xxl) {
-    display: none;
+    //display: none;
   }
 
   .chevron {
@@ -76,6 +76,10 @@
     white-space: nowrap;
     opacity: 0.25;
     animation: pulse 2s linear alternate infinite;
+
+    @include for-size(xxl) {
+      display: none;
+    }
   }
 
   @keyframes pulse {

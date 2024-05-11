@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { MdOutlineMenu } from 'react-icons/md';
 import { IoMdClose } from 'react-icons/io';
 import { NavLink } from 'react-router-dom';
-import { Modal } from 'antd';
 import { ROUTES } from 'enums';
-import s from './Navigation.module.scss';
 import { ModalDelivery } from 'components/ModalDelivery';
+import s from './Navigation.module.scss';
 
 const sizeIcon = 30;
 const colorIcon = '#000';

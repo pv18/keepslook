@@ -50,6 +50,7 @@
       font-size: clamp(42px, 12vw, 156px);
       font-family: 'AlkalamiRegular', serif;
       font-weight: 400;
+      color: #4c3f2f;
 
       @include for-size(md) {
         width: auto;

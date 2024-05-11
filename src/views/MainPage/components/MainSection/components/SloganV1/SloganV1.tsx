@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import s from 'views/MainPage/components/MainSection/components/SloganV1/SloganV1.module.scss';
+import s from './SloganV1.module.scss';
 
 const textOnRightAnimation = {
   hidden: {

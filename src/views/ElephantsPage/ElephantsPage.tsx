@@ -38,6 +38,13 @@ import Img1Group8 from './assets/group8/1.jpg';
 import Img1Group9 from './assets/group9/1.jpg';
 import Img1Group10 from './assets/group10/1.jpg';
 import Img1Group11 from './assets/group11/1.jpg';
+import Img1Group12 from './assets/group12/1.jpg';
+import Img2Group12 from './assets/group12/2.jpg';
+import Img3Group12 from './assets/group12/3.jpg';
+import Img4Group12 from './assets/group12/4.jpg';
+import Img5Group12 from './assets/group12/5.jpg';
+import Img6Group12 from './assets/group12/6.jpg';
+import Img7Group12 from './assets/group12/7.jpg';
 import s from './ElephantsPage.module.scss';
 
 export const ElephantsPage = () => {
@@ -78,6 +85,15 @@ export const ElephantsPage = () => {
   const group9 = [Img1Group9];
   const group10 = [Img1Group10];
   const group11 = [Img1Group11];
+  const group12 = [
+    Img6Group12,
+    Img1Group12,
+    Img2Group12,
+    Img3Group12,
+    Img4Group12,
+    Img5Group12,
+    Img7Group12,
+  ];
 
   const shortText = () => {
     return (
@@ -197,6 +213,7 @@ export const ElephantsPage = () => {
         <ImageGroup images={group6} />
         <ImageGroup images={group10} />
         <ImageGroup images={group11} />
+        <ImageGroup images={group12} />
       </section>
     </Layout>
   );

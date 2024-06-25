@@ -9,44 +9,44 @@ import Typewriter from 'typewriter-effect';
 import s from './MainSection.module.scss';
 
 export const MainSection = () => {
-  const { isScreenMd } = useResize();
+    const { isScreenMd } = useResize();
 
-  return (
-    <motion.section
-      initial={'hidden'}
-      whileInView={'visible'}
-      className={s.wrapper}
-    >
-      <div className={s.container}>
-        {isScreenMd ? <SloganV1 /> : <SloganV2 />}
+    return (
+        <motion.section
+            initial={'hidden'}
+            whileInView={'visible'}
+            className={s.wrapper}
+        >
+            <div className={s.container}>
+                {isScreenMd ? <SloganV1 /> : <SloganV2 />}
 
-        <div className={s.mainBlock}>
-          <div className={s.logo}>
-            <Typewriter
-              options={{
-                strings: ['keepslook.ru'],
-                //@ts-ignore
-                pauseFor: 6000,
-                autoStart: true,
-                loop: true,
-                delay: 150,
-                deleteSpeed: 50,
-              }}
-            />
-          </div>
-          <div className={s.imagesBlock}>
-            <div className={s.firstImg}>
-              <img src={Img2} />
+                <div className={s.mainBlock}>
+                    <div className={s.logo}>
+                        <Typewriter
+                            options={{
+                                strings: ['keepslook.ru'],
+                                //@ts-ignore
+                                pauseFor: 6000,
+                                autoStart: true,
+                                loop: true,
+                                delay: 150,
+                                deleteSpeed: 50,
+                            }}
+                        />
+                    </div>
+                    <div className={s.imagesBlock}>
+                        <div className={s.firstImg}>
+                            <img src={Img2} />
+                        </div>
+                        <div className={s.secondImg}>
+                            <img src={Img1} />
+                        </div>
+                    </div>
+                </div>
+
+                {isScreenMd ? <SloganV2 /> : <SloganV1 />}
             </div>
-            <div className={s.secondImg}>
-              <img src={Img1} />
-            </div>
-          </div>
-        </div>
-
-        {isScreenMd ? <SloganV2 /> : <SloganV1 />}
-      </div>
-      <ScrollDowns />
-    </motion.section>
-  );
+            <ScrollDowns />
+        </motion.section>
+    );
 };

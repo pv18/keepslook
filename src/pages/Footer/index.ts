@@ -1,1 +1,1 @@
-export * from 'views/Footer/Footer';
+export * from 'pages/Footer/Footer';

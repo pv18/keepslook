@@ -1,46 +1,46 @@
 @import 'src/styles/vars';
 
 .wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  row-gap: 5vh;
-  margin-bottom: 10vh;
-  width: 100%;
-  text-align: right;
-  font-family: 'Miama', sarif;
-  user-select: none;
-  z-index: 5;
-
-  @include for-size(md) {
-    margin-bottom: 0;
-    color: #fff;
-    text-align: left;
-    row-gap: 3vh;
-  }
-
-  .title {
-    padding-right: 10vw;
-    font-size: clamp(22px, 7vw, 54px);
-    font-weight: 400;
-    //color: #806959;
-    color: #4c3f2f;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    margin-bottom: 10vh;
+    width: 100%;
+    text-align: right;
+    font-family: 'Miama', sarif;
+    user-select: none;
+    z-index: 5;
 
     @include for-size(md) {
-      padding-right: 0;
-      text-shadow:
-        1px 3px 0 #ffffff,
-        1px 13px 5px #ffffff;
-      z-index: 5;
+        margin-bottom: 0;
+        color: #fff;
+        text-align: left;
+        row-gap: 3vh;
     }
-  }
 
-  .subTitle {
-    font-size: clamp(16px, 4vw, 30px);
-    font-style: italic;
-    font-weight: 600;
-    //color: #806959;
-    color: #4c3f2f;
-    z-index: 5;
-  }
+    .title {
+        padding-right: 10vw;
+        font-size: clamp(22px, 7vw, 54px);
+        font-weight: 400;
+        //color: #806959;
+        color: #4c3f2f;
+
+        @include for-size(md) {
+            padding-right: 0;
+            text-shadow:
+                1px 3px 0 #ffffff,
+                1px 13px 5px #ffffff;
+            z-index: 5;
+        }
+    }
+
+    .subTitle {
+        font-size: clamp(16px, 4vw, 30px);
+        font-style: italic;
+        font-weight: 600;
+        //color: #806959;
+        color: #4c3f2f;
+        z-index: 5;
+    }
 }

@@ -13,28 +13,28 @@
 //font-family: "Sriracha", cursive;
 
 * {
-  -webkit-tap-highlight-color: transparent;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  min-height: 100vh;
+    min-height: 100vh;
 
-  font-family: 'DM Sans', sans-serif;
-  letter-spacing: -0.5px;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: -0.5px;
 
-  /* Light mode */
-  //background-color: var(--page-bg);
-  color: var(--text-color);
-  background-color: #f7f6ee;
+    /* Light mode */
+    //background-color: var(--page-bg);
+    color: var(--text-color);
+    background-color: #f7f6ee;
 }
 
 .img-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-gap: 2rem;
-  padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 2rem;
+    padding: 2rem;
 }

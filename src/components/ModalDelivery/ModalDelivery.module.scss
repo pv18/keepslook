@@ -1,41 +1,41 @@
 @import './src/styles/vars';
 
 .modal {
-  max-width: 1000px !important;
-  width: 100% !important;
+    max-width: 1000px !important;
+    width: 100% !important;
 
-  .content {
-    padding: 20px 40px;
-    color: rgb(185, 180, 160);
+    .content {
+        padding: 20px 40px;
+        color: rgb(185, 180, 160);
 
-    @include for-size(xl) {
-      padding: 15px 30px;
+        @include for-size(xl) {
+            padding: 15px 30px;
+        }
+
+        @include for-size(md) {
+            padding: 10px 20px;
+        }
+
+        @include for-size(sm) {
+            padding: 0;
+        }
     }
 
-    @include for-size(md) {
-      padding: 10px 20px;
+    .title {
+        margin-bottom: 20px;
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
     }
 
-    @include for-size(sm) {
-      padding: 0;
+    .text {
+        margin-bottom: 15px;
+        font-size: 22px;
+        line-height: 1.4;
+        font-weight: 400;
+
+        &::first-letter {
+            margin-left: 20px;
+        }
     }
-  }
-
-  .title {
-    margin-bottom: 20px;
-    font-size: 30px;
-    font-weight: 400;
-    text-align: center;
-  }
-
-  .text {
-    margin-bottom: 15px;
-    font-size: 22px;
-    line-height: 1.4;
-    font-weight: 400;
-
-    &::first-letter {
-      margin-left: 20px;
-    }
-  }
 }

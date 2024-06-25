@@ -1,109 +1,109 @@
 @import '../../../../styles/vars';
 
 .wrapper {
-  height: 100vh;
-  padding: 5vh 2vw;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  font-size: 70px;
-  font-weight: 600;
-  background: #fff;
-  overflow-x: hidden;
-
-  @include for-size(md) {
-    height: 600px;
-    padding: 20px;
-  }
-
-  .container {
-    max-width: 1230px;
-    width: 100%;
-    padding: 40px 15px;
-    margin: 0 auto;
-    background: linear-gradient(to right, #b19d87 85%, #f7f6ee 85%);
-
-    @include for-size(md) {
-      padding: 20px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      background-image: url('bg-mobile2.jpg');
-      background-position: top left;
-      background-repeat: no-repeat;
-    }
-  }
-
-  .mainBlock {
-    margin-bottom: 10vh;
-    width: 100%;
+    height: 100vh;
+    padding: 5vh 2vw;
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    user-select: none;
+    flex-direction: column;
+    font-size: 70px;
+    font-weight: 600;
+    background: #fff;
+    overflow-x: hidden;
 
     @include for-size(md) {
-      margin-bottom: 0;
+        height: 600px;
+        padding: 20px;
     }
 
-    .logo {
-      padding-left: 48px;
-      font-size: clamp(42px, 12vw, 156px);
-      font-family: 'AlkalamiRegular', serif;
-      font-weight: 400;
-      color: #4c3f2f;
-
-      @include for-size(md) {
-        width: auto;
-        padding-left: 0;
-        margin-bottom: 20px;
-      }
-    }
-
-    .imagesBlock {
-      position: relative;
-      width: 50%;
-      display: flex;
-      justify-content: flex-end;
-
-      @include for-size(md) {
-        display: none;
-      }
-
-      .firstImg {
-        position: absolute;
-        max-width: 300px;
+    .container {
+        max-width: 1230px;
         width: 100%;
-        top: 200px;
-        right: 250px;
-        z-index: 1;
-        -webkit-box-shadow: -7px 7px 5px -5px rgba(34, 60, 80, 0.6);
-        -moz-box-shadow: -7px 7px 5px -5px rgba(34, 60, 80, 0.6);
-        box-shadow: -7px 7px 5px -5px rgba(34, 60, 80, 0.6);
-      }
+        padding: 40px 15px;
+        margin: 0 auto;
+        background: linear-gradient(to right, #b19d87 85%, #f7f6ee 85%);
 
-      .secondImg {
-        position: relative;
+        @include for-size(md) {
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-image: url('bg-mobile2.jpg');
+            background-position: top left;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .mainBlock {
+        margin-bottom: 10vh;
+        width: 100%;
         display: flex;
-        max-width: 300px;
-        width: 100%;
-        z-index: 2;
-        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
-        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
-        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
-      }
-    }
-  }
+        justify-content: space-between;
+        user-select: none;
 
-  .mobileImg {
-    display: none;
+        @include for-size(md) {
+            margin-bottom: 0;
+        }
 
-    @include for-size(md) {
-      display: block;
-      position: absolute;
-      top: 300px;
-      right: 10px;
-      width: 220px;
-      z-index: 2;
+        .logo {
+            padding-left: 48px;
+            font-size: clamp(42px, 12vw, 156px);
+            font-family: 'AlkalamiRegular', serif;
+            font-weight: 400;
+            color: #4c3f2f;
+
+            @include for-size(md) {
+                width: auto;
+                padding-left: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        .imagesBlock {
+            position: relative;
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+
+            @include for-size(md) {
+                display: none;
+            }
+
+            .firstImg {
+                position: absolute;
+                max-width: 300px;
+                width: 100%;
+                top: 200px;
+                right: 250px;
+                z-index: 1;
+                -webkit-box-shadow: -7px 7px 5px -5px rgba(34, 60, 80, 0.6);
+                -moz-box-shadow: -7px 7px 5px -5px rgba(34, 60, 80, 0.6);
+                box-shadow: -7px 7px 5px -5px rgba(34, 60, 80, 0.6);
+            }
+
+            .secondImg {
+                position: relative;
+                display: flex;
+                max-width: 300px;
+                width: 100%;
+                z-index: 2;
+                -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
+                -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
+                box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
+            }
+        }
     }
-  }
+
+    .mobileImg {
+        display: none;
+
+        @include for-size(md) {
+            display: block;
+            position: absolute;
+            top: 300px;
+            right: 10px;
+            width: 220px;
+            z-index: 2;
+        }
+    }
 }

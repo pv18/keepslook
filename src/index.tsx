@@ -8,12 +8,12 @@ import { ConfigProvider } from 'antd';
 import './styles/global.scss';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+    document.getElementById('root') as HTMLElement,
 );
 root.render(
-  <ConfigProvider locale={locale} theme={antTheme}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </ConfigProvider>
+    <ConfigProvider locale={locale} theme={antTheme}>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </ConfigProvider>,
 );

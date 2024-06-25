@@ -1,84 +1,84 @@
 @import './src/styles/vars';
 
 .wrapper {
-  padding-bottom: 40px;
-  min-height: 100vh;
-  height: 100%;
-  background-color: $black;
-  background-image: url('./image/bg-main.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;
-  background-position: center center;
-
-  @include for-size(lg) {
-    padding-bottom: 20px;
-  }
-
-  @include for-size(md) {
-    background-image: none;
-    padding-bottom: 0;
-  }
-
-  .block {
-    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: 100vh;
+    height: 100%;
+    background-color: $black;
+    background-image: url('./image/bg-main.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center center;
 
     @include for-size(lg) {
-      padding-top: 30px;
+        padding-bottom: 20px;
     }
 
     @include for-size(md) {
-      padding-top: 20px;
+        background-image: none;
+        padding-bottom: 0;
     }
 
-    @include for-size(sm) {
-      padding-top: 0;
-    }
-  }
+    .block {
+        padding-top: 40px;
 
-  .about {
-    padding: 80px;
-    margin: 0 auto 40px auto;
-    background-color: #e7e3e1;
-    max-width: 780px;
-    width: 100%;
-    -webkit-box-shadow: 0px 10px 30px -5px rgba(34, 60, 80, 0.6);
-    -moz-box-shadow: 0px 10px 30px -5px rgba(34, 60, 80, 0.6);
-    box-shadow: 0px 10px 30px -5px rgba(34, 60, 80, 0.6);
+        @include for-size(lg) {
+            padding-top: 30px;
+        }
 
-    @include for-size(lg) {
-      margin-bottom: 20px;
-      padding: 40px;
+        @include for-size(md) {
+            padding-top: 20px;
+        }
+
+        @include for-size(sm) {
+            padding-top: 0;
+        }
     }
 
-    @include for-size(md) {
-      margin: 0 auto;
-      padding: 20px;
-    }
+    .about {
+        padding: 80px;
+        margin: 0 auto 40px auto;
+        background-color: #e7e3e1;
+        max-width: 780px;
+        width: 100%;
+        -webkit-box-shadow: 0px 10px 30px -5px rgba(34, 60, 80, 0.6);
+        -moz-box-shadow: 0px 10px 30px -5px rgba(34, 60, 80, 0.6);
+        box-shadow: 0px 10px 30px -5px rgba(34, 60, 80, 0.6);
 
-    &__title {
-      color: #333;
-      font-size: 48px;
-      margin-bottom: 30px;
-      text-align: center;
-      user-select: none;
-    }
+        @include for-size(lg) {
+            margin-bottom: 20px;
+            padding: 40px;
+        }
 
-    &__divider {
-      max-width: 400px;
-      width: 100%;
-      height: 3px;
-      margin: 0 auto 30px auto;
-      background-color: #666;
-    }
+        @include for-size(md) {
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    &__text {
-      font-size: 18px;
-      font-weight: 300;
-      font-family: sans-serif;
-      line-height: 1.55;
-      color: #000;
-      text-indent: 30px;
+        &__title {
+            color: #333;
+            font-size: 48px;
+            margin-bottom: 30px;
+            text-align: center;
+            user-select: none;
+        }
+
+        &__divider {
+            max-width: 400px;
+            width: 100%;
+            height: 3px;
+            margin: 0 auto 30px auto;
+            background-color: #666;
+        }
+
+        &__text {
+            font-size: 18px;
+            font-weight: 300;
+            font-family: sans-serif;
+            line-height: 1.55;
+            color: #000;
+            text-indent: 30px;
+        }
     }
-  }
 }

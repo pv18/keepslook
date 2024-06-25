@@ -4,14 +4,14 @@ const white = '#fff';
 const dark = '#333';
 
 export const antTheme = {
-  components: {
-    Menu: {
-      colorTextBase: white,
-      colorBgBase: dark,
-      algorithm: true,
+    components: {
+        Menu: {
+            colorTextBase: white,
+            colorBgBase: dark,
+            algorithm: true,
+        },
+        Drawer: {
+            colorBgElevated: '#000000',
+        },
     },
-    Drawer: {
-      colorBgElevated: '#000000',
-    },
-  },
 };

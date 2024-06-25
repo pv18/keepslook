@@ -1,205 +1,205 @@
 @import './src/styles/vars';
 
 .wrapper {
-  width: 100%;
-  padding-bottom: 40px;
-
-  @include for-size(lg) {
-    padding-bottom: 30px;
-  }
-
-  @include for-size(md) {
-    padding-bottom: 20px;
-  }
-
-  @include for-size(sm) {
-    padding-bottom: 10px;
-  }
-
-  .viewer {
-    position: relative;
-    z-index: 9999;
-  }
-
-  .description {
+    width: 100%;
     padding-bottom: 40px;
-    background-color: #f7f6ee;
-
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-      font-family: 'Caveat', cursive;
-      font-weight: 400;
-      font-size: 58px;
-      color: #31405b;
-      user-select: none;
-
-      @include for-size(md) {
-        margin-bottom: 10px;
-      }
-    }
-
-    .divider {
-      max-width: 400px;
-      width: 100%;
-      height: 3px;
-      margin: 0 auto 30px auto;
-      background-color: #31405b;
-    }
-
-    p {
-      margin-bottom: 10px;
-      padding: 0 10px;
-      text-indent: 20px;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.6;
-      color: #31405b;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  .main {
-    background-color: #f7f6ee;
-    padding-top: 120px;
-    padding-bottom: 120px;
 
     @include for-size(lg) {
-      padding-bottom: 80px;
-      padding-top: 80px;
+        padding-bottom: 30px;
     }
 
     @include for-size(md) {
-      padding-bottom: 60px;
-      padding-top: 60px;
+        padding-bottom: 20px;
     }
 
     @include for-size(sm) {
-      padding-top: 40px;
-      padding-bottom: 40px;
+        padding-bottom: 10px;
     }
 
-    &Row {
-      padding: 0 30px;
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 120px;
-      column-gap: 90px;
+    .viewer {
+        position: relative;
+        z-index: 9999;
+    }
 
-      @include for-size(md) {
-        padding: 20px 15px;
-        margin-bottom: 40px;
-        flex-direction: column;
-        align-items: center;
-        column-gap: 0;
+    .description {
+        padding-bottom: 40px;
         background-color: #f7f6ee;
-        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
-        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
-        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
-      }
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-      &:nth-child(even) {
-        flex-direction: row-reverse;
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Caveat', cursive;
+            font-weight: 400;
+            font-size: 58px;
+            color: #31405b;
+            user-select: none;
+
+            @include for-size(md) {
+                margin-bottom: 10px;
+            }
+        }
+
+        .divider {
+            max-width: 400px;
+            width: 100%;
+            height: 3px;
+            margin: 0 auto 30px auto;
+            background-color: #31405b;
+        }
+
+        p {
+            margin-bottom: 10px;
+            padding: 0 10px;
+            text-indent: 20px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #31405b;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .main {
+        background-color: #f7f6ee;
+        padding-top: 120px;
+        padding-bottom: 120px;
+
+        @include for-size(lg) {
+            padding-bottom: 80px;
+            padding-top: 80px;
+        }
 
         @include for-size(md) {
-          flex-direction: column;
+            padding-bottom: 60px;
+            padding-top: 60px;
         }
-      }
+
+        @include for-size(sm) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        &Row {
+            padding: 0 30px;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 120px;
+            column-gap: 90px;
+
+            @include for-size(md) {
+                padding: 20px 15px;
+                margin-bottom: 40px;
+                flex-direction: column;
+                align-items: center;
+                column-gap: 0;
+                background-color: #f7f6ee;
+                -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
+                -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
+                box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+
+                @include for-size(md) {
+                    flex-direction: column;
+                }
+            }
+        }
+        &Content {
+            width: 100%;
+
+            @include for-size(md) {
+                margin-bottom: 20px;
+            }
+        }
+        &Img {
+            flex-shrink: 0;
+            display: flex;
+            width: 480px;
+            height: 390px;
+            -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
+            -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
+            box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
+
+            @include for-size(lg) {
+                width: 499px;
+                height: 300px;
+            }
+
+            @include for-size(md) {
+                width: 380px;
+                height: 280px;
+                box-shadow: none;
+            }
+
+            @include for-size(sm) {
+                width: 280px;
+                height: 200px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &Img__vertically {
+            height: 480px;
+            width: 390px;
+
+            @include for-size(md) {
+                width: 280px;
+                height: 280px;
+            }
+        }
+        &ContentText {
+            margin-bottom: 40px;
+            font-family: 'Sriracha', cursive;
+            font-weight: 400;
+            font-size: clamp(14px, 4vw, 20px);
+            line-height: 1.6;
+            color: #31405b;
+
+            a {
+                color: #138ece;
+            }
+
+            p {
+                margin: 0;
+                margin-bottom: 15px;
+            }
+        }
+        .header {
+            font-family: 'Caveat', cursive;
+            margin-bottom: 20px;
+            font-weight: 400;
+            font-size: 42px;
+            color: #31405b;
+        }
     }
-    &Content {
-      width: 100%;
 
-      @include for-size(md) {
-        margin-bottom: 20px;
-      }
+    .images {
+        background-color: #f7f6ee;
     }
-    &Img {
-      flex-shrink: 0;
-      display: flex;
-      width: 480px;
-      height: 390px;
-      -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
-      -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
-      box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.8);
 
-      @include for-size(lg) {
-        width: 499px;
-        height: 300px;
-      }
+    .button {
+        padding-left: 20px;
+        font-weight: 600;
 
-      @include for-size(md) {
-        width: 380px;
-        height: 280px;
-        box-shadow: none;
-      }
-
-      @include for-size(sm) {
-        width: 280px;
-        height: 200px;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+        @include for-size(md) {
+            letter-spacing: 1px;
+        }
     }
-    &Img__vertically {
-      height: 480px;
-      width: 390px;
 
-      @include for-size(md) {
-        width: 280px;
-        height: 280px;
-      }
+    .buttonWrapper {
+        display: flex;
+        justify-content: center;
     }
-    &ContentText {
-      margin-bottom: 40px;
-      font-family: 'Sriracha', cursive;
-      font-weight: 400;
-      font-size: clamp(14px, 4vw, 20px);
-      line-height: 1.6;
-      color: #31405b;
-
-      a {
-        color: #138ece;
-      }
-
-      p {
-        margin: 0;
-        margin-bottom: 15px;
-      }
-    }
-    .header {
-      font-family: 'Caveat', cursive;
-      margin-bottom: 20px;
-      font-weight: 400;
-      font-size: 42px;
-      color: #31405b;
-    }
-  }
-
-  .images {
-    background-color: #f7f6ee;
-  }
-
-  .button {
-    padding-left: 20px;
-    font-weight: 600;
-
-    @include for-size(md) {
-      letter-spacing: 1px;
-    }
-  }
-
-  .buttonWrapper {
-    display: flex;
-    justify-content: center;
-  }
 }

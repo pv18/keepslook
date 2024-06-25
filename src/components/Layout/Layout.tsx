@@ -3,17 +3,17 @@ import { useScrollToTop } from 'hooks';
 import { Navigation, ScrollToTopButton } from 'components';
 
 interface LayoutProps {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
-  useScrollToTop();
+    useScrollToTop();
 
-  return (
-    <>
-      <Navigation />
-      <ScrollToTopButton />
-      {children}
-    </>
-  );
+    return (
+        <>
+            <Navigation />
+            <ScrollToTopButton />
+            {children}
+        </>
+    );
 };

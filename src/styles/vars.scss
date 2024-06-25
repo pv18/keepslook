@@ -19,35 +19,35 @@ $navigation-color: $white;
 //$footer-bg:           pale-neon-blue;
 
 :root {
-  /* Colors */
-  --blackpure: #000;
-  --black: #171718;
-  --black-border: #26292d;
-  --white: #fff;
-  --purple: #5c62ec;
+    /* Colors */
+    --blackpure: #000;
+    --black: #171718;
+    --black-border: #26292d;
+    --white: #fff;
+    --purple: #5c62ec;
 
-  /* Nav */
-  --nav-bg: var(--black);
-  --nav-border: var(--black-border);
-  --nav-text: var(--white);
+    /* Nav */
+    --nav-bg: var(--black);
+    --nav-border: var(--black-border);
+    --nav-text: var(--white);
 
-  /* Header */
-  --header-bg: var(--black);
-  --header-text: var(--white);
+    /* Header */
+    --header-bg: var(--black);
+    --header-text: var(--white);
 
-  /* Footer */
-  --footer-bg: var(--black);
-  --footer-text: var(--white);
+    /* Footer */
+    --footer-bg: var(--black);
+    --footer-text: var(--white);
 
-  /* Light mode */
-  --page-bg: var(--white);
-  --text-color: var(--black);
-  --accent: var(--purple);
-  --title-1: var(--accent);
+    /* Light mode */
+    --page-bg: var(--white);
+    --text-color: var(--black);
+    --accent: var(--purple);
+    --title-1: var(--accent);
 
-  --project-card-bg: var(--white);
-  --project-card-text: var(--black);
-  --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+    --project-card-bg: var(--white);
+    --project-card-text: var(--black);
+    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
 }
 
 $box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);

@@ -26,13 +26,13 @@ import Product4Img4 from './assets/product4/4.jpg';
 import Product4Img5 from './assets/product4/5.jpg';
 import Product4Img6 from './assets/product4/6.jpg';
 import Product4Img7 from './assets/product4/7.jpg';
-import Product5Img1 from './assets/product5/1.jpg';
-import Product5Img2 from './assets/product5/2.jpg';
-import Product5Img3 from './assets/product5/3.jpg';
-import Product5Img4 from './assets/product5/4.jpg';
-import Product5Img5 from './assets/product5/5.jpg';
-import Product5Img6 from './assets/product5/6.jpg';
-import Product5Img7 from './assets/product5/7.jpg';
+import Product5Img1 from './assets/product5/1.jpeg';
+import Product5Img2 from './assets/product5/2.jpeg';
+import Product5Img3 from './assets/product5/3.jpeg';
+import Product5Img4 from './assets/product5/4.jpeg';
+import Product5Img5 from './assets/product5/5.jpeg';
+import Product5Img6 from './assets/product5/6.jpeg';
+import Product5Img7 from './assets/product5/7.jpeg';
 import Product6Img1 from './assets/product6/1.jpg';
 import Product6Img2 from './assets/product6/2.jpg';
 import Product6Img3 from './assets/product6/3.jpg';
@@ -81,13 +81,13 @@ export const ReadyWorksPage = () => {
         Product4Img7,
     ];
     const productImages5 = [
-        Product5Img1,
+        Product5Img7,
         Product5Img2,
         Product5Img3,
         Product5Img4,
         Product5Img5,
         Product5Img6,
-        Product5Img7,
+        Product5Img1,
     ];
     const productImages6 = [
         Product6Img1,
@@ -126,6 +126,7 @@ export const ReadyWorksPage = () => {
                             color={'Старая бронза'}
                             size={[33, 69, 21]}
                             price={addSpacesToHundredths(25000)}
+                            discount={addSpacesToHundredths(18750)}
                         />
                         <ProductCard
                             images={productImages4}
@@ -140,6 +141,7 @@ export const ReadyWorksPage = () => {
                             color={'Розовая пудра'}
                             size={[36, 53, 20]}
                             price={addSpacesToHundredths(25000)}
+                            discount={addSpacesToHundredths(18750)}
                         />
                         <ProductCard
                             images={productImages6}
@@ -147,6 +149,7 @@ export const ReadyWorksPage = () => {
                             color={'Черненая бронза'}
                             size={[36, 52.5, 23]}
                             price={addSpacesToHundredths(25000)}
+                            discount={addSpacesToHundredths(18750)}
                         />
                     </div>
                 </Container>

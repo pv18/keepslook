@@ -2,17 +2,19 @@ import React, { FC, memo, useCallback, useState } from 'react';
 import ImageViewer from 'react-simple-image-viewer';
 import { Carousel } from 'antd';
 import s from './ProductCard.module.scss';
+import { ProductAmount } from 'pages/ReadyWorksPage/components/ProductAmount';
 
 interface ProductCardProps {
     images: string[];
     title: string;
     price: string;
+    discount?: string;
     color: string;
     size: [number, number, number];
 }
 
 export const ProductCard: FC<ProductCardProps> = memo(props => {
-    const { images, title, price, color, size } = props;
+    const { images, title, price, discount, color, size } = props;
     const [currentImage, setCurrentImage] = useState(0);
     const [isViewerOpen, setIsViewerOpen] = useState(false);
 
@@ -60,7 +62,7 @@ export const ProductCard: FC<ProductCardProps> = memo(props => {
                             Размер (Д &times; В &times; Г) : {`${size[0]}`}{' '}
                             &times; {`${size[1]}`} &times; {`${size[2]}`}
                         </div>
-                        <div className={s.price}>{`Цена: ${price}`}</div>
+                        <ProductAmount amount={price} discount={discount} />
                     </div>
                 </>
             )}

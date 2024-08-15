@@ -1,8 +1,9 @@
 import React, { FC, memo, useCallback, useState } from 'react';
 import ImageViewer from 'react-simple-image-viewer';
 import { Carousel } from 'antd';
-import s from './ProductCard.module.scss';
 import { ProductAmount } from 'pages/ReadyWorksPage/components/ProductAmount';
+import { Sale } from 'components';
+import s from './ProductCard.module.scss';
 
 interface ProductCardProps {
     images: string[];
@@ -34,6 +35,11 @@ export const ProductCard: FC<ProductCardProps> = memo(props => {
 
     return (
         <div className={s.card}>
+            {discount && (
+                <div className={s.sale}>
+                    <Sale value={'-25%'} />
+                </div>
+            )}
             {isViewerOpen ? (
                 <div className={s.viewer}>
                     <ImageViewer

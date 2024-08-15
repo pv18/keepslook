@@ -126,7 +126,7 @@ export const ReadyWorksPage = () => {
                             color={'Старая бронза'}
                             size={[33, 69, 21]}
                             price={addSpacesToHundredths(25000)}
-                            discount={addSpacesToHundredths(18750)}
+                            // discount={addSpacesToHundredths(18750)}
                         />
                         <ProductCard
                             images={productImages4}
@@ -141,7 +141,7 @@ export const ReadyWorksPage = () => {
                             color={'Розовая пудра'}
                             size={[36, 53, 20]}
                             price={addSpacesToHundredths(25000)}
-                            discount={addSpacesToHundredths(18750)}
+                            // discount={addSpacesToHundredths(18750)}
                         />
                         <ProductCard
                             images={productImages6}
@@ -149,7 +149,7 @@ export const ReadyWorksPage = () => {
                             color={'Черненая бронза'}
                             size={[36, 52.5, 23]}
                             price={addSpacesToHundredths(25000)}
-                            discount={addSpacesToHundredths(18750)}
+                            // discount={addSpacesToHundredths(18750)}
                         />
                     </div>
                 </Container>

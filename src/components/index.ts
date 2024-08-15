@@ -8,3 +8,4 @@ export * from './ScrollToTopButton';
 export * from './ImageGroup';
 export * from './Layout';
 export * from './ModalDelivery';
+export { Sale } from './Sale';
